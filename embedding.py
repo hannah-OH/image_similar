@@ -6,6 +6,9 @@ import numpy as np
 from PIL import Image
 import requests
 
+import warnings
+warnings.filterwarnings(action="ignore")
+
 class FeatureExtractor:
     def __init__(self, weights: str = "imagenet", color_type: str = "RGB"):
         base_model = tf.keras.applications.VGG16(weights=weights)
